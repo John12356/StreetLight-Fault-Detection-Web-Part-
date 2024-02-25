@@ -1,0 +1,37 @@
+.home-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.productlist {
+  margin: 30px 20px 20px 20px;
+  border-radius: 10px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.productlist h1 {
+  text-align: center;
+}
+.product-list-item {
+  display: flex;
+  align-items: center;
+}
+.product-list-img {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.product-list-edit-bt {
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: #3bb077;
+  color: white;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.product-list-del-bt {
+  color: red;
+  cursor: pointer;
+}
