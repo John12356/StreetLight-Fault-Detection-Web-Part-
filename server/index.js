@@ -16,7 +16,7 @@ mongoose
 
 app.use("/api/auth", userRoute);
 app.use("/api/data", dataRoute);
-app.use("/api/checkPost", checkRoute);
+app.use("/api/check", checkRoute);
 
 app.listen(process.env.PORT, () => {
   console.log("Good to go");

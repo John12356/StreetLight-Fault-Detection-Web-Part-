@@ -2,7 +2,7 @@ const router = require("express").Router();
 const Check = require("../models/check");
 
 //check
-router.post("./checkPost", async (req, res) => {
+router.post("/checkPost", async (req, res) => {
   console.log(req.body);
   const data = req.body;
   const newData = new Check(data);
