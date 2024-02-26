@@ -11,7 +11,10 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/data/getData")
+      // .get("http://localhost:8080/api/data/getData")
+      .get(
+        "https://streetlight-fault-detection-hjba.onrender.com/api/data/getData"
+      )
       .then((res) => {
         console.log(res.data);
         setData(res.data);
