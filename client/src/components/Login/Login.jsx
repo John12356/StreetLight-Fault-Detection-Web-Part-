@@ -21,10 +21,7 @@ const Login = () => {
     }
     axios
       // .post(`http://localhost:8080/api/auth/login`, userLogin)
-      .post(
-        "https://streetlight-fault-detection-hjba.onrender.com/api/auth/login",
-        userLogin
-      )
+      .post("http://localhost:8080/api/auth/login", userLogin)
       .then((result) => {
         console.log(result);
         navigate("/home");

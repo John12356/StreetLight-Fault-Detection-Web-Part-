@@ -12,9 +12,7 @@ const Home = () => {
   useEffect(() => {
     axios
       // .get("http://localhost:8080/api/data/getData")
-      .get(
-        "https://streetlight-fault-detection-hjba.onrender.com/api/data/getData"
-      )
+      .get("http://localhost:8080/api/data/getData")
       .then((res) => {
         console.log(res.data);
         setData(res.data);
@@ -23,6 +21,12 @@ const Home = () => {
         console.log(err);
       });
   }, [setData]);
+
+  const repaireLed = (ledId) => {
+    e.preventDefault();
+
+    console.log(ledId);
+  };
 
   const columns = [
     {
@@ -37,7 +41,7 @@ const Home = () => {
         );
       },
     },
-    { field: "_id", headerName: "Id", width: 200 },
+    { field: "ledId", headerName: "Id", width: 80 },
     //  {
     //    field: "co_ordinates",
     //    headerName: "Co-Ordinates",
@@ -52,7 +56,7 @@ const Home = () => {
     //    },
     //  },
     { field: "co_ordinates", headerName: "Co-Ordinates", width: 200 },
-    { field: "city", headerName: "City", width: 200 },
+    { field: "city", headerName: "City", width: 150 },
     //  { field: "limit", headerName: "Limit", width: 120 },
     //  { field: "isSeries", headerName: "Series", width: 120 },
 
@@ -70,6 +74,26 @@ const Home = () => {
         );
       },
     },
+    // {
+    //   field: "",
+    //   headerName: "Repaired",
+    //   width: 200,
+    //   renderCell: (params) => {
+    //     // console.log(params.row.ledId);
+    //     return (
+    //       <>
+    //         {/* <Link to={"/location"} state={{ src: params.value }}> */}
+    //         <button
+    //           onClick={() => repaireLed(params.row.ledId)}
+    //           className="product-list-edit-bt"
+    //         >
+    //           Done
+    //         </button>
+    //         {/* </Link> */}
+    //       </>
+    //     );
+    //   },
+    // },
   ];
 
   return (
